@@ -339,7 +339,8 @@ class AlphaFold(hk.Module):
           non_ensembled_batch=non_ensembled_batch,
           is_training=is_training,
           compute_loss=compute_loss,
-          ensemble_representations=ensemble_representations)
+          ensemble_representations=ensemble_representations,
+          return_representations=return_representations)
 
     if self.config.num_recycle:
       emb_config = self.config.embeddings_and_evoformer
